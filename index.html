@@ -139,11 +139,13 @@
   margin-top: 5px;
   margin-left: 30px;
   margin-bottom: 10px;
-  clear: both; }
+  clear: both;
+   }
 
 .timeline-centered .timeline-entry .timeline-entry-inner {
   position: relative;
-  margin-left: -20px; }
+  margin-left: -20px;
+ }
 
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon {
   display: block;
@@ -183,7 +185,14 @@
   margin-left: 60px;
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
-  background-clip: padding-box; }
+  background-clip: padding-box;
+  transition:.5s ease all; }
+
+  .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label:hover {
+    color:#000000;
+    background:rgb(233, 230, 230);
+    text-decoration:none;
+  }
 
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label:after {
   content: '';
@@ -619,7 +628,7 @@ padding-top: 2px;}
             <h1 class="title is-1">
               Hello! <span class="wave">👋🏻</span> I'm Kunlun Wang 
             </h1>
-            <h2 style="color:#fff">A <span class="typing" ></span></h2>
+            <h2 style="color:#fff">I'm  <span class="typing" ></span></h2>
 
             <br>
             <h2 class="subtitle">
@@ -2476,7 +2485,7 @@ padding-top: 2px;}
   <script src="dist/vendor/typed.js/typed.min.js"></script>
   <script type="text/javascript">
     var typed = new Typed('.typing',{
-      strings: ["software developer", "biochemistry explorer", "indie game developer", "big fan of human metabolism", "big fan of drug delivery", "big fan of synthetic biology", "big fan of cancer biology"],
+      strings: ["a software developer", "a machine learning enthusiast", "a biochemistry explorer", "an indie game developer", "a big fan of human metabolism", "big fan of bioinformatics", "a big fan of synthetic biology", "a big fan of cancer biology"],
       loop: true,
       typeSpeed: 80,
       backSpeed: 40
