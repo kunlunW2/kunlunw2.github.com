@@ -15,7 +15,9 @@
 
   <link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
 
-  
+  <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+  <link href="jquery.readall.css" rel="stylesheet" />
+
   
 
 
@@ -671,8 +673,12 @@ padding-top: 2px;}
 
 
 
+.test {
+            /* font-size: 1em;
+            padding: 0 15px; */
+        }
 
-
+        
 
 
 		
@@ -779,7 +785,7 @@ padding-top: 2px;}
     <div class="container">
       <h1 class="title">About Me</h1>
       <hr />
-      
+      <div class = "test">
         <p>Double majoring in <b>Biochemistry</b> and <b>Computer Science</b> at the <strong>University of Wisconsin-Madison</strong> allowed me
         to come into contact with various interdisciplinary studies at the undergraduate level. Inspired by the “first
         living robots” research of the controllable synthetic microorganism—xenobots, I started to explore the
@@ -807,11 +813,41 @@ padding-top: 2px;}
 
         </p>
 
-    
+      </div>
   </div>
   </section>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="jquery.readall.js"></script>
 
+  <script>
+    $(document).ready(function () {
+        $('.test').readall({
+            // Default values
+            showheight: 200,                         // height to show
+            showrows: null,                         // rows to show (overrides showheight)
+            animationspeed: 350,                    // speed of transition
+            btnTextShowmore: 'Read more',           // text shown on button to show more
+            btnTextShowless: 'Read less',           // text shown on button to show less
+            btnClassShowmore: 'readall-button',     // class(es) on button to show more
+            btnClassShowless: 'readall-button'      // class(es) on button to show less
+        });
+    });
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 
 
 
@@ -1337,7 +1373,7 @@ padding-top: 2px;}
        <div class="row">
           <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
              <div class="progress-wrap">
-                <h3 > JavaScript (3 yrs)</h3>
+                <h3 > JavaScript/jQuery (3 yrs)</h3>
                 <div class="progress">
                    <div class="progress-bar color-1" role="progressbar" aria-valuenow="85"
                       aria-valuemin="0" aria-valuemax="100" style="width:85%">
