@@ -11,7 +11,13 @@
   <script src="https://kit.fontawesome.com/4e5a72c756.js"></script>
 
 
+  <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js'></script>
+
+  <link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+
   
+  
+
 
 
   <style>
@@ -71,16 +77,16 @@
     display: inline-block;
     margin: 7px;
     padding: 5px 10px;
-    color: #374054;
-    background: #e4e4ea;
+    color: #363636;
+    background: #e9e9e9;
     list-style: none;
     font-size: 1.2em;
     transition:.5s ease all;
   }
 
 .btn-rounded-black:hover{
-  color:#374054;
-  background:rgb(167, 161, 161);
+  color:#363636;
+  background:rgb(177, 177, 177);
   text-decoration:none;
   }
 
@@ -386,7 +392,7 @@ padding-top: 2px;}
   float: left;
   width: 0%;
   height: 100%;
-  font-size: 12px;
+  font-size: 15px;
   line-height: 20px;
   color: #fff;
   text-align: center;
@@ -500,6 +506,7 @@ padding-top: 2px;}
 #skills {
     padding: 20px 15px;
     text-align: center;
+    
 }
 
 #skills h2 {
@@ -573,6 +580,103 @@ padding-top: 2px;}
 }
 
 
+.collapsible {
+  /* background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px; */
+  background-color: rgb(233, 233, 233);
+  display:inline-block;
+  color:#363636;
+  padding:10px 35px;
+  border:3px solid #fff;
+  border-radius:30px;
+  transition:.5s ease all;
+  cursor: pointer;
+  text-align: center;
+  
+}
+
+.active, .collapsible:hover {
+  background-color: rgb(180, 180, 180);
+}
+
+.collapsible:after {
+  content: '\002B';
+  color:#363636;
+  font-weight: bold;
+  float: center;
+  margin-left: 10px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.contentW {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+  background-color: #ffffff;
+}
+
+
+.scroll-down {
+	position: absolute;
+	left: 50%;
+	bottom: -50px;
+	display: block;
+	text-align: center;
+	font-size: 20px;
+	z-index: 100;
+	text-decoration: none;
+	text-shadow: 0;
+  width: 13px;
+  height: 13px;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+  z-index: 9;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%) rotate(45deg);
+  -moz-transform: translate(-50%, 0%) rotate(45deg);
+  transform: translate(-50%, 0%) rotate(45deg);
+	-webkit-animation: fade_move_down 3s ease-in-out infinite;
+	-moz-animation:    fade_move_down 3s ease-in-out infinite;
+	animation:         fade_move_down 3s ease-in-out infinite;
+}
+
+
+/*animated scroll arrow animation*/
+@-webkit-keyframes fade_move_down {
+  0%   { -webkit-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { -webkit-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+}
+@-moz-keyframes fade_move_down {
+  0%   { -moz-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { -moz-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+}
+@keyframes fade_move_down {
+  0%   { transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { transform:translate(0,10px) rotate(45deg); opacity: 0; }
+}
+
+
+
+
+
+
+
+		
+
 
 
 
@@ -632,7 +736,8 @@ padding-top: 2px;}
             <h1 class="title is-1">
               Hello! <span class="wave">👋🏻</span> I'm Kunlun Wang 
             </h1>
-            <h2 style="color:#fff">I'm  <span class="typing" ></span></h2>
+            <br>
+            <h2 class="subtitle" style="color:#fff"><strong>I'm  <span class="typing" ></span></strong></h2>
 
             <br>
             <h2 class="subtitle">
@@ -641,7 +746,7 @@ padding-top: 2px;}
               Biochemistry explorer <i class="fas fa-bacteria"></i> 
               <br>
               Indie game developer <i class="fas fa-gamepad"></i> -->
-              <strong>Self-driven, quick starter, innovative interdisciplinary learner <br> who enjoys solving complex and challenging real-world problems.</strong>
+              <strong>Self-driven, quick starter, passionate, innovative interdisciplinary learner <br> who enjoys solving complex and challenging real-world problems.</strong>
             </h2>
             
             <p>
@@ -650,6 +755,11 @@ padding-top: 2px;}
               </a>
             
             </p>
+
+            
+              <div class="scroll-down"></div>
+         
+            
 
             
           </div>
@@ -664,12 +774,12 @@ padding-top: 2px;}
 
 
   
-  
 
   <section class="section">
     <div class="container">
       <h1 class="title">About Me</h1>
       <hr />
+      
         <p>Double majoring in <b>Biochemistry</b> and <b>Computer Science</b> at the <strong>University of Wisconsin-Madison</strong> allowed me
         to come into contact with various interdisciplinary studies at the undergraduate level. Inspired by the “first
         living robots” research of the controllable synthetic microorganism—xenobots, I started to explore the
@@ -677,6 +787,7 @@ padding-top: 2px;}
         medical research. Frontier research like the medical micro/nanorobotics holds considerable promise for
         advancing medical diagnosis and treatment due to their unique abilities to move and perform complex tasks
         at small scales, attracting me to conduct in-depth studies at a graduate level. </p>
+
         <br>
         <p> As a determined interdisciplinary learner, I have grasped abundant theoretical knowledge and lab experiences
           in zoology, organic chemistry, analytical chemistry, physical chemistry, biochemistry, and botany. By finishing
@@ -695,8 +806,14 @@ padding-top: 2px;}
           myself a better global citizen. 
 
         </p>
-    </div>
+
+    
+  </div>
   </section>
+
+
+
+
 
 
 
@@ -815,6 +932,47 @@ padding-top: 2px;}
           </div>
         </div>
       </div>
+
+
+      <div class="card card-gap">
+        <div class="card-content">
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-48x48">
+                <img src="dist/img/uw.jpg" alt="Placeholder image">
+              </figure>
+            </div>
+            <div class="media-content">
+              <p class="title is-4">UW Madison CS Department</p>
+              <p class="subtitle is-6">CS Learning Center Tutor - <time datetime="2020-9">September 2020</time> - <time
+                  datetime="2020-12">December 2020</time></p>
+            </div>
+          </div>
+          <div class="content">
+            <p>CS programming tutor for UW-Madison CS department</p>
+            
+            <ul>
+              <li>
+                Tutored students who were taking basic programming courses (CS200, CS300, CS400, CS354), applied CS education theory when tutoring
+              </li>
+            </ul>
+
+            <div class="tags">
+              <span class="tag">Java programming</span>
+              <span class="tag">Data strcuture</span>
+              <span class="tag">JavaFX</span>
+              <span class="tag">Sorting algorithm</span>
+              <span class="tag">Hashing</span>
+              <span class="tag">Graph</span>
+              
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+
+
       <div class="card card-gap">
         <div class="card-content">
           <div class="media">
@@ -1086,12 +1244,12 @@ padding-top: 2px;}
                         </figure>
           
                       </div>
-                      <div class="timeline-label">
+                      <div class="timeline-label" style = "color:#363636">
 
-                         <h2><a href="https://en.wikipedia.org/wiki/Bashu_Secondary_School" target="_blank" rel="noopener noreferrer" >Bashu Secondary School</a> <span>2014 - 2017</span></h2>
-                         <p><strong><i class="fas fa-location-arrow"></i> Chongqing, China</strong><br>
+                         <a href="https://en.wikipedia.org/wiki/Bashu_Secondary_School" target="_blank" rel="noopener noreferrer" style = "color:#363636; font-size: 1.2em; font-weight: bold;">Bashu Secondary School</a> <span>2014 - 2017</span>
+                         <p ><strong><i class="fas fa-location-arrow"></i> Chongqing, China</strong><br>
                           <br>
-                            🎯 Focused on learning <strong>English & Chinese Literature</strong>, <strong>Math</strong>, and <strong>Chemistry</strong>; participated in <strong>student club</strong> activities and <strong>leadership</strong> programs. 
+                            Focused on learning <strong>English & Chinese Literature</strong>, <strong>Math</strong>, and <strong>Chemistry</strong>; participated in <strong>student club</strong> activities and <strong>leadership</strong> programs. 
                         
                              <br>
                          <p></p>  
@@ -1105,11 +1263,11 @@ padding-top: 2px;}
                           <img class="is-rounded " src="dist/img/noble-logo.png" style = "position:relative; left:-14px; top:-5px;" >
                         </figure>
                       </div>
-                      <div class="timeline-label">
-                         <h2><a href="https://www.rsu60.org/" target="_blank" rel="noopener noreferrer">Noble High School</a> <span>2015 - 2016</span></h2>
+                      <div class="timeline-label" style = "color:#363636">
+                         <a href="https://www.rsu60.org/" target="_blank" rel="noopener noreferrer" style = "color:#363636; font-size: 1.2em; font-weight: bold;">Noble High School</a> <span>2015 - 2016</span>
                          <p><strong><i class="fas fa-location-arrow"></i> North Berwick, Maine</strong><br>
                           <br> 
-                            🎯 Exchange student, focused on learning <strong>Biology</strong>, <strong>Chemistry</strong>, <strong>Anatomy & Physiology</strong>, and <strong>US History</strong>
+                            Exchange student, focused on learning <strong>Biology</strong>, <strong>Chemistry</strong>, <strong>Anatomy & Physiology</strong>, and <strong>US History</strong>
                             
                          <p></p>
                       </div>
@@ -1122,11 +1280,11 @@ padding-top: 2px;}
                           <img class="is-rounded " src="dist/img/uw-logo2.png" style = "position:relative; left:-14px; top:-5px;" >
                         </figure>
                       </div>
-                      <div class="timeline-label">
-                         <h2><a href='https://www.wisc.edu/' target="_blank" rel="noopener noreferrer">University of Wisconsin-Madison</a> <span>2017 - 2021</span></h2>
+                      <div class="timeline-label" style = "color:#363636">
+                         <a href='https://www.wisc.edu/' target="_blank" rel="noopener noreferrer" style = "color:#363636; font-size: 1.2em; font-weight: bold;" >University of Wisconsin-Madison</a> <span>2017 - 2021</span>
                          <p><strong><i class="fas fa-location-arrow"></i> Madison, Wisconsin</strong><br>
                           <br>
-                            🎯 Majored in <strong>Computer Science</strong> and <strong>Biochemistry</strong>.
+                            Majored in <strong>Computer Science</strong> and <strong>Biochemistry</strong>.
               
                          <p></p>
                       </div>
@@ -1140,11 +1298,13 @@ padding-top: 2px;}
                          <img class="is-rounded " src="dist/img/columbia-logo3.png" style = "position:relative; left:-14px; top:-5px;" >
                        </figure>
                      </div>
-                     <div class="timeline-label">
-                        <h2><a href='https://www.columbia.edu/' target="_blank" rel="noopener noreferrer" >Columbia University</a> <span>Present</span></h2>
-                        <p><strong><i class="fas fa-location-arrow"></i> New York City</strong><br>
+                     <div class="timeline-label" style = "color:#363636">
+                        <a href='https://www.columbia.edu/' target="_blank" rel="noopener noreferrer" style = "color:#363636; font-size: 1.2em; font-weight: bold;">Columbia University</a> <span>Present</span>
+                        
+                          <p ><strong><i class="fas fa-location-arrow"></i> New York City</strong><br>
+
                           <br>
-                           🎯 Majored in <strong>Biomedical Engineering</strong>.
+                           Majored in <strong>Biomedical Engineering</strong>.
                            
                         <p></p>
                      </div>
@@ -1254,7 +1414,7 @@ padding-top: 2px;}
           </div>
           <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
              <div class="progress-wrap">
-                <h3 >Python (1yr)</h3>
+                <h3 >Python/Pandas/NumPy (1yr)</h3>
                 <div class="progress">
                    <div class="progress-bar color-7" role="progressbar" aria-valuenow="50"
                       aria-valuemin="0" aria-valuemax="100" style="width:50%">
@@ -1292,72 +1452,260 @@ padding-top: 2px;}
         </div>
  </section>
 
+
+
+ 
+
+
+
+
+
+
+
  
  
 
  <section class="section">  
-  <div class="container"> 
-    <div class="row">
+  <div class="container" style = "text-align: center;"> 
+    <div class="row" style="text-align: left;">
       <h1 class="title">Lab skills</h1>
       <hr/>
      </div>
+     <br>
+     <button class="collapsible subtitle is-5 " style = "font-weight: bold;">Biochemistry Lab</button>
+<div class="contentW">
+  <div id = "skills" >
+    <ul>
+        
+      <div class="btn-rounded-black">
+        <p>PCR</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p>Primer design</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p>Restriction digest</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p>Gibson Assembly</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p>Screening</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p>Site-directed mutagenesis</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p>Agarose gel electrophoresis</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p>SDS-PAGE electrophoresis</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p>Western blot</p>
+      </div>
 
-     <div id = "skills">
-      <ul>
-        <div class="btn-rounded-black">
-          <p>PCR</p>
-        </div>
-        <div class="btn-rounded-black">
-          <p>Gibson Assembly</p>
-        </div>
-        <div class="btn-rounded-black">
-          <p>Minipreps</p>
-        </div>
-        <div class="btn-rounded-black">
-          <p>Blue/white Screening</p>
-        </div>
-        <div class="btn-rounded-black">
-          <p>Lac operon system</p>
-        </div>
-        <div class="btn-rounded-black">
-          <p>Metal affinity chromatography</p>
-        </div>
-        <div class="btn-rounded-black">
-          <p>Dialysis</p>
-        </div>
-        <div class="btn-rounded-black">
-          <p>SDS-PAGE electrophoresis</p>
-        </div>
-        <div class="btn-rounded-black">
-          <p>Fluorescence spectroscopy</p>
-        </div>
-        <div class="btn-rounded-black">
-          <p>FRET</p>
-        </div>
-        <div class="btn-rounded-black">
-          <p>PyMol</p>
-        </div>
-        <div class="btn-rounded-black">
-          <p>Intermediate biology lab techniques</p>
-        </div>
-        <div class="btn-rounded-black">
-          <p>Intermediate biochemistry lab techniques</p>
-        </div>
-        <div class="btn-rounded-black">
-          <p>Intermediate analytical chemistry lab techniques</p>
-        </div>
-        <div class="btn-rounded-black">
-          <p>Intermediate organic chemistry lab techniques</p>
-        </div>
-        
-        
+      <div class="btn-rounded-black">
+        <p>Protein overexpression</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p>T7/Lac system</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p>Bacterial transformation</p>
+      </div>
 
+      <div class="btn-rounded-black">
+        <p>Protein purification</p>
+      </div>
+      
+      <div class="btn-rounded-black">
+        <p>Chromatography</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p>UV-Vis Spectroscopy</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p>Fluorescence spectroscopy</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p>FRET</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p>PyMol</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p>Protein folding</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p>Enzyme kinetics</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p>Ligand binding</p>
+      </div>
+  </ul>
+  </div>
+</div>
+
+
+<button class="collapsible subtitle is-5" style = "font-weight: bold;">Analytical Chemistry Lab</button>
+<div class="contentW">
+  <div id = "skills" >
+    <ul>
         
-    </ul>
-     </div>
+      <div class="btn-rounded-black">
+        <p>Blanks</p>
+      </div>
+     
+      <div class="btn-rounded-black">
+        <p>Quality Control Sampling</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p>Spike Recoveries</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p>EPA Method Detection Limit</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p>Statistical analysis</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p>Volumetric Analyses</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p>Calibration Checks</p>
+      </div>
+      
+      <div class="btn-rounded-black">
+        <p>polyprotic acid-base titration</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p>Buffer preparation</p>
+      </div>
+
+      <div class="btn-rounded-black">
+        <p>Electrochemical cell</p>
+      </div>
+      
+      <div class="btn-rounded-black">
+        <p>Indicator electrodes</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p>Chromatography</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p>Standardization of solution</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p>spectrophotometric analysis</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p>Chemical oxygen demand method</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p>Identification of unknown acid</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p>ICP-MS analysis</p>
+      </div>
+    
+  </ul>
+  </div>
+</div>
+
+
+<button class="collapsible subtitle is-5" style = "font-weight: bold;">    Organic Chemistry Lab
+</button>
+<div class="contentW">
+  <div id = "skills" >
+    <ul>
+        
+      <div class="btn-rounded-black">
+        <p>Computational molecular modeling</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p>Computational chemistry</p>
+      </div>
+     
+      <div class="btn-rounded-black">
+        <p>Acid-base extraction</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p>Purification</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p>Fractional distillation</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p>Reflux</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p><sup>1</sup>H-NMR</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p><sup>13</sup>C-NMR</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p><sup>19</sup>F-NMR</p>
+      </div>
+      <div class="btn-rounded-black">
+      <p>HSQC</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p>HMBC</p>
+      </div>
+      <div class="btn-rounded-black">
+          <p>Attached proton test (APT)</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p>Infrared spectroscopy</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p>GC-MS</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p>Recrystallization</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p>SN1/SN2 reactions</p>
+      </div>
+      
+      <div class="btn-rounded-black">
+        <p>E1/E2 reactions</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p>Oxidation reactions</p>
+      </div>
+
+      <div class="btn-rounded-black">
+        <p>TLC plate</p>
+      </div>
+      
+      <div class="btn-rounded-black">
+        <p>Imine formation reactions</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p>EAS reactions</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p>Friedel-Crafts acylations</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p>Grignard reactions</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p>Biginelli synthesis</p>
+      </div>
+      <div class="btn-rounded-black">
+        <p>SNAr reactions</p>
+      </div>
+    
+  </ul>
+  </div>
+</div>
+
   </div>
  </section>
-
 
 
 
@@ -1402,6 +1750,9 @@ padding-top: 2px;}
       </nav>
     </div>
   </section>
+
+
+  
 
   <!-- Modals -->
   <div id="project-1-modal" class="modal">
@@ -2504,6 +2855,30 @@ padding-top: 2px;}
       backSpeed: 50
     });
   </script>
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+  
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.maxHeight){
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      } 
+    });
+  }
+  </script>
+
+
+
+
+
+
+
 
 </body>
 
